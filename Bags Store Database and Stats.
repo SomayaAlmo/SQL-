@@ -1,0 +1,22 @@
+--Create a grocery store database
+
+CREATE TABLE Bags (id INTEGER PRIMARY KEY, NAME TEXT, PRICE INTEGER,popularity INTEGER);
+INSERT INTO Bags VALUES (1, "Female Adults side bag", 14.00, 40) ; 
+INSERT INTO Bags VALUES (2, "Male Adults side bag", 12.00, 77);
+INSERT INTO Bags VALUES (3, "Kids side bag", 10.00, 67);
+INSERT INTO Bags VALUES (4, "Femal Adults back bag", 30.00, 56);
+INSERT INTO Bags VALUES (5, "Male Adults back bag", 34.00, 89);
+INSERT INTO Bags VALUES (6, "Kids back bag", 37.00, 76);
+INSERT INTO Bags VALUES (7, "Female Adults hand bag", 48.00, 94);
+INSERT INTO Bags VALUES (8, "Male Adults hand bag", 43.00, 68);
+INSERT INTO Bags VALUES (9, "Kids hand bag", 32.00, 102);
+
+--display the database ordered by price.
+SELECT * FROM Bags Order by price asc;
+
+--what is the avg price of Bags in the bulk section? 
+SELECT SUM(PRICE) FROM Bags;
+
+--what are the most 5 popular Bags? 
+SELECT Name, price, popularity FROM Bags 
+order by popularity desc;
