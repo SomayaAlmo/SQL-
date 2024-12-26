@@ -1,0 +1,17 @@
+Select* 
+From superstore;
+-- Write a SQL query that orders the items by price.
+SELECT price, item_name 
+FROM superstore
+Order by price; 
+-- Write your own SQL query that will show a statistic about the item prices, like a sum, average, minimum, maximum, or count.
+SELECT SUM(price)
+From superstore;
+-- show a statistic about the price for items in the category of "Kitchen Supplies".
+SELECT SUM(price), category
+FROM superstore
+WHERE category = 'Kitchen Supplies';
+-- What is the maximum average rating for the Furnishing category
+SELECT MAX(average_rating), category
+FROM superstore 
+WHERE Category= 'kitchen supplies';
